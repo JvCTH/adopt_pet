@@ -143,12 +143,6 @@
                     android:gravity="center_horizontal"
                     android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/rbAccept"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Aceptar Términos y Condiciones" />
-
                 </RadioGroup>
 
                 <Button
@@ -161,6 +155,12 @@
                     android:text="Registrarse"
                     android:textAllCaps="true"
                     android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/rbAccept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aceptar Términos y Condiciones" />
 
             </LinearLayout>
 

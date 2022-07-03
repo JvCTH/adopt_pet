@@ -32,7 +32,8 @@ public class VistaRegistrarseActivityTest {
         onView(withId(R.id.correoF)).check(matches(isDisplayed()));
         onView(withId(R.id.contrasenia1F)).check(matches(isDisplayed()));
         onView(withId(R.id.contrasenia2F)).check(matches(isDisplayed()));
-        onView(withId(R.id.registrar)).check(matches(isDisplayed()));
+
+       // onView(withId(R.id.rbAccept)).check(matches(isDisplayed()));
 
     }
     @Test
@@ -45,7 +46,8 @@ public class VistaRegistrarseActivityTest {
         onView(withId(R.id.correoF)).check(matches(isDisplayed()));
         onView(withId(R.id.contrasenia1F)).check(matches(isDisplayed()));
         onView(withId(R.id.contrasenia2F)).check(matches(isDisplayed()));
-        onView(withId(R.id.registrar)).check(matches(isDisplayed()));
+       // onView(withId(R.id.rbAccept)).perform(click());
+      //  onView(withId(R.id.registrar)).perform(click());
 
 
 
@@ -61,7 +63,8 @@ public class VistaRegistrarseActivityTest {
         onView(withId(R.id.correoF)).check(matches(isDisplayed()));
         onView(withId(R.id.contrasenia1F)).check(matches(isDisplayed()));
         onView(withId(R.id.contrasenia2F)).check(matches(isDisplayed()));
-        onView(withId(R.id.registrar)).check(matches(isDisplayed()));
+      //  onView(withId(R.id.rbAccept)).perform(click());
+        //onView(withId(R.id.registrar)).check(matches(isDisplayed()));
 
 
 
@@ -70,7 +73,7 @@ public class VistaRegistrarseActivityTest {
     public void VistaRegistraseActivityCase03ok() {
           String nombre ="Juan";
           String apellidos="Perez Chilon";
-        String direccion="Jr. comercio 440";
+          String direccion="Jr. comercio 440";
         onView(withId(R.id.nombreF)).check(matches(isDisplayed()));
         onView(withId(R.id.apellidosF)).check(matches(isDisplayed()));
         onView(withId(R.id.direccionF)).check(matches(isDisplayed()));
@@ -78,7 +81,8 @@ public class VistaRegistrarseActivityTest {
         onView(withId(R.id.correoF)).check(matches(isDisplayed()));
         onView(withId(R.id.contrasenia1F)).check(matches(isDisplayed()));
         onView(withId(R.id.contrasenia2F)).check(matches(isDisplayed()));
-        onView(withId(R.id.registrar)).check(matches(isDisplayed()));
+        //  onView(withId(R.id.rbAccept)).perform(click());
+         // onView(withId(R.id.registrar)).check(matches(isDisplayed()));
 
     }
     @Test
@@ -94,7 +98,8 @@ public class VistaRegistrarseActivityTest {
         onView(withId(R.id.correoF)).check(matches(isDisplayed()));
         onView(withId(R.id.contrasenia1F)).check(matches(isDisplayed()));
         onView(withId(R.id.contrasenia2F)).check(matches(isDisplayed()));
-        onView(withId(R.id.registrar)).check(matches(isDisplayed()));
+      //  onView(withId(R.id.rbAccept)).perform(click());
+       // onView(withId(R.id.registrar)).check(matches(isDisplayed()));
     }
     @Test
     public void VistaRegistraseActivityCase05ok() {
@@ -111,7 +116,8 @@ public class VistaRegistrarseActivityTest {
         onView(withId(R.id.correoF)).check(matches(isDisplayed()));
         onView(withId(R.id.contrasenia1F)).check(matches(isDisplayed()));
         onView(withId(R.id.contrasenia2F)).check(matches(isDisplayed()));
-        onView(withId(R.id.registrar)).check(matches(isDisplayed()));
+       // onView(withId(R.id.rbAccept)).perform(click());
+       // onView(withId(R.id.registrar)).check(matches(isDisplayed()));
     }
 
     @Test
@@ -121,7 +127,8 @@ public class VistaRegistrarseActivityTest {
         String direccion="Jr. comercio 440";
         String  celular= "998789656";
         String  correo= "juan@gmail.com";
-        String contrasenia = "123juan";
+        String contrasenia1 = "123juan";
+        String contrasenia2 = "123juan";
         onView(withId(R.id.nombreF)).check(matches(isDisplayed()));
         onView(withId(R.id.apellidosF)).check(matches(isDisplayed()));
         onView(withId(R.id.direccionF)).check(matches(isDisplayed()));
@@ -130,5 +137,25 @@ public class VistaRegistrarseActivityTest {
         onView(withId(R.id.contrasenia1F)).check(matches(isDisplayed()));
         onView(withId(R.id.contrasenia2F)).check(matches(isDisplayed()));
         onView(withId(R.id.registrar)).check(matches(isDisplayed()));
+
+    }
+    @Test
+    public void VistaRegistraseActivityCase01Fail() {
+        String nombre =" ";
+        String apellidos=" ";
+        String direccion=" ";
+        String  celular= " ";
+        String  correo= " ";
+        String contrasenia1 = " ";
+        String contrasenia2 = " ";
+        onView(withId(R.id.nombreF)).check(matches(isDisplayed()));
+        onView(withId(R.id.apellidosF)).check(matches(isDisplayed()));
+        onView(withId(R.id.direccionF)).check(matches(isDisplayed()));
+        onView(withId(R.id.celularF)).check(matches(isDisplayed()));
+        onView(withId(R.id.correoF)).check(matches(isDisplayed()));
+        onView(withId(R.id.contrasenia1F)).check(matches(isDisplayed()));
+        onView(withId(R.id.contrasenia2F)).check(matches(isDisplayed()));
+        onView(withId(R.id.registrar)).check(matches(isDisplayed()));
+
     }
 }
