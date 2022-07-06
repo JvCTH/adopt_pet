@@ -46,17 +46,22 @@ public class DetalleAdopcionActivity extends AppCompatActivity {
         getAdopcion();
 
         whatsapp.setOnClickListener(view -> {
-            String url = "https://api.whatsapp.com/send?phone=" + "+51" + adop.getNumero();
-            try {
-                PackageManager pm = getPackageManager();
-                pm.getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES);
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
 
-                startActivity(i);
+            try {
+                startActivity(
+                        new Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse(
+                                        "https://api.whatsapp.com/send?phone=51" + adop.getNumero()
+                                )
+                        )
+                );
+
+
             } catch (Exception e) {
                 Toast.makeText(DetalleAdopcionActivity.this, "La aplicación Whatsapp no está instalada en su celular", Toast.LENGTH_SHORT).show();
             }
+
         });
         llamada.setOnClickListener(view -> {
             try {

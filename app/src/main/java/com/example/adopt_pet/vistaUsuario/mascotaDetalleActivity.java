@@ -69,14 +69,17 @@ public class mascotaDetalleActivity extends AppCompatActivity {
         builder.register();
 
         whatsapp.setOnClickListener(view -> {
-            String url = "https://api.whatsapp.com/send?phone=" + "+51" + data.getContacto();
-            try {
-                PackageManager pm = getPackageManager();
-                pm.getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES);
-                Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(url));
 
-                startActivity(i);
+            try {
+                startActivity(
+                        new Intent(
+                                Intent.ACTION_VIEW,
+                                Uri.parse(
+                                        "https://api.whatsapp.com/send?phone=51" + data.getContacto()
+                                )
+                        )
+                );
+
             } catch (Exception e) {
                 Toast.makeText(mascotaDetalleActivity.this, "La aplicación Whatsapp no está instalada en su celular", Toast.LENGTH_SHORT).show();
             }
